@@ -1,0 +1,79 @@
+@use "./variables" as *;
+
+// Desktop
+@mixin text-preset-1 {
+  font-size: $fs-64;
+  font-weight: $fw-black;
+  line-height: $lh-110;
+}
+
+@mixin text-preset-2 {
+  font-size: $fs-40;
+  font-weight: $fw-black;
+  line-height: $lh-110;
+}
+
+@mixin text-preset-3 {
+  font-size: $fs-16;
+  font-weight: $fw-black;
+  line-height: $lh-110;
+  letter-spacing: 0.25rem;
+}
+
+@mixin text-preset-4 {
+  font-size: $fs-18;
+  font-weight: $fw-medium;
+  line-height: $lh-150;
+}
+
+@mixin text-preset-5 {
+  font-size: $fs-16;
+  font-weight: $fw-black;
+  line-height: $lh-150;
+}
+
+// Tablet
+@mixin text-preset-t1 {
+  font-size: $fs-48;
+  font-weight: $fw-black;
+  line-height: $lh-110;
+}
+
+@mixin text-preset-t2 {
+  font-size: $fs-36;
+  font-weight: $fw-black;
+  line-height: $lh-110;
+}
+
+@mixin text-preset-t3 {
+  font-size: $fs-14;
+  font-weight: $fw-black;
+  line-height: $lh-110;
+  letter-spacing: 0.25rem;
+}
+
+@mixin text-preset-t4 {
+  font-size: $fs-16;
+  font-weight: $fw-medium;
+  line-height: $lh-150;
+}
+
+// Mobile
+@mixin text-preset-m1 {
+  font-size: $fs-40;
+  font-weight: $fw-black;
+  line-height: $lh-110;
+}
+
+@mixin text-preset-m2 {
+  font-size: $fs-32;
+  font-weight: $fw-black;
+  line-height: $lh-110;
+}
+
+@mixin text-preset-m3 {
+  font-size: $fs-12;
+  font-weight: $fw-black;
+  line-height: $lh-110;
+  letter-spacing: 0.25rem;
+}
