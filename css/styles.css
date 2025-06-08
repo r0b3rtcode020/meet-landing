@@ -1,0 +1,146 @@
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@500;900&display=swap");
+/* Reset CSS básico */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100vh;
+}
+
+body {
+  font-family: "Red Hat Display", sans-serif;
+  font-size: 1rem;
+  font-weight: 500;
+  line-height: 1.5;
+  background: #fafafa;
+  color: #87879d;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+button,
+input,
+select,
+textarea {
+  font: inherit;
+  background: none;
+  border: none;
+  outline: none;
+}
+
+/* Fin reset básico */
+.header {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+.header .logo {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  padding: 3rem 5rem 0 5rem;
+}
+.header .hero {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  padding-top: 4rem;
+  padding-bottom: 2rem;
+}
+.header .hero__image {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  height: 10rem;
+}
+.header .hero__image img {
+  object-fit: cover;
+}
+.header .hero__image-left {
+  display: none;
+}
+.header .hero__image-right {
+  display: none;
+}
+.header .hero__content {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  padding: 0 2rem;
+}
+.header .hero__content-title {
+  font-size: 2.5rem;
+  font-weight: 900;
+  line-height: 1.1;
+  color: #28283d;
+  text-wrap: balance;
+}
+.header .hero__cta {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+.hero__cta-primary {
+  font-size: 1rem;
+  font-weight: 900;
+  line-height: 1.5;
+  padding: 1rem 2.5rem;
+  border-radius: 2rem;
+  cursor: pointer;
+  color: #fafafa;
+  background-color: #4d96a9;
+}
+.hero__cta-primary:hover {
+  background-color: #71c0d4;
+}
+.hero__cta-primary span {
+  color: #8fe3f9;
+  margin-left: 0.25rem;
+}
+
+.hero__cta-secondary {
+  font-size: 1rem;
+  font-weight: 900;
+  line-height: 1.5;
+  padding: 1rem 2.5rem;
+  border-radius: 2rem;
+  cursor: pointer;
+  color: #fafafa;
+  background-color: #855fb1;
+}
+.hero__cta-secondary:hover {
+  background-color: #b18bdd;
+}
+.hero__cta-secondary span {
+  color: #d9b8ff;
+  margin-left: 0.25rem;
+}
+
+/*# sourceMappingURL=styles.css.map */

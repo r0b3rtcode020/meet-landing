@@ -1,0 +1,44 @@
+@use "../base/variables" as *;
+@use "../base/mixins" as *;
+
+@mixin button($variant) {
+  @include text-preset-5;
+  padding: $spacing-16 $spacing-40;
+  border-radius: $spacing-32;
+  cursor: pointer;
+  color: $color-white;
+
+  @if $variant == "primary" {
+    background-color: $color-cyan-600;
+    &:hover {
+      background-color: #71c0d4;
+    }
+
+    span {
+      color: $color-cyan-300;
+      margin-left: $spacing-4;
+    }
+  }
+
+  @if $variant == "secondary" {
+    background-color: $color-purple-600;
+    &:hover {
+      background-color: #b18bdd;
+    }
+
+    span {
+      color: $color-purple-300;
+      margin-left: $spacing-4;
+    }
+  }
+}
+
+//------------ Button classes ------------//
+
+.hero__cta-primary {
+  @include button("primary");
+}
+
+.hero__cta-secondary {
+  @include button("secondary");
+}
