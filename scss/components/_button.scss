@@ -1,44 +1,55 @@
 @use "../base/variables" as *;
 @use "../base/mixins" as *;
 
-@mixin button($variant) {
+/*----------------- Buttons -----------------*/
+
+%button {
   @include text-preset-5;
   padding: $spacing-16 $spacing-40;
   border-radius: $spacing-32;
   cursor: pointer;
   color: $color-white;
+  span {
+    margin-left: $spacing-4;
+  }
+}
 
+@mixin button($variant) {
   @if $variant == "primary" {
     background-color: $color-cyan-600;
     &:hover {
       background-color: #71c0d4;
     }
-
+    &:focus {
+      outline: 0.125rem solid #71c0d4;
+      outline-offset: 0.25rem;
+    }
     span {
       color: $color-cyan-300;
-      margin-left: $spacing-4;
     }
-  }
-
-  @if $variant == "secondary" {
+  } @else if $variant == "secondary" {
     background-color: $color-purple-600;
     &:hover {
       background-color: #b18bdd;
     }
-
+    &:focus {
+      outline: 0.125rem solid #b18bdd;
+      outline-offset: 0.25rem;
+    }
     span {
       color: $color-purple-300;
-      margin-left: $spacing-4;
     }
   }
 }
 
 //------------ Button classes ------------//
 
-.hero__cta-primary {
+.button--primary {
+  @extend %button;
   @include button("primary");
 }
 
-.hero__cta-secondary {
+.button--secondary {
+  @extend %button;
   @include button("secondary");
 }

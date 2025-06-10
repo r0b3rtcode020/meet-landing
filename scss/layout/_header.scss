@@ -31,11 +31,11 @@
       }
     }
 
-    &__image-left {
+    &__image--left {
       display: none;
     }
 
-    &__image-right {
+    &__image--right {
       display: none;
     }
 
@@ -44,12 +44,12 @@
       flex-direction: column;
       gap: $spacing-24;
       padding: 0 $spacing-32;
+    }
 
-      &-title {
-        @include text-preset-m1;
-        color: $color-slate-900;
-        text-wrap: balance;
-      }
+    &__title {
+      @include text-preset-m1;
+      color: $color-slate-900;
+      text-wrap: balance;
     }
 
     &__cta {
