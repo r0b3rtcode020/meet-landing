@@ -72,13 +72,20 @@ textarea {
   padding-top: 4rem;
   padding-bottom: 2rem;
 }
+@media screen and (width >= 48rem) {
+  .header .hero {
+    gap: 4.5rem;
+    padding-bottom: 4rem;
+  }
+}
 .header .hero__image {
   display: flex;
   justify-content: center;
   width: 100%;
-  height: 10rem;
+  height: clamp(10rem, 42vw, 25rem);
 }
 .header .hero__image img {
+  width: 100%;
   object-fit: cover;
 }
 .header .hero__image--left {
@@ -93,18 +100,35 @@ textarea {
   gap: 1.5rem;
   padding: 0 2rem;
 }
+@media screen and (width >= 48rem) {
+  .header .hero__content {
+    padding: 0 10rem;
+  }
+}
 .header .hero__title {
   font-size: 2.5rem;
   font-weight: 900;
   line-height: 1.1;
   color: #28283d;
-  text-wrap: balance;
+}
+@media screen and (width >= 48rem) {
+  .header .hero__title {
+    font-size: 3rem;
+    font-weight: 900;
+    line-height: 1.1;
+  }
 }
 .header .hero__cta {
   display: flex;
   flex-direction: column;
+  justify-content: center;
   align-items: center;
   gap: 1rem;
+}
+@media screen and (width >= 48rem) {
+  .header .hero__cta {
+    flex-direction: row;
+  }
 }
 
 /*----------------- Buttons -----------------*/
