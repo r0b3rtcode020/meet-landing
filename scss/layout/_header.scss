@@ -1,6 +1,8 @@
 @use "../base/variables" as *;
 @use "../base/mixins" as *;
 
+/*----------------- Header -----------------*/
+
 .header {
   display: flex;
   flex-direction: column;
@@ -23,12 +25,18 @@
       gap: $spacing-72;
       padding-bottom: $spacing-64;
     }
+    @media screen and (width >= 64rem) {
+      flex-direction: row;
+    }
 
     &__image {
       display: flex;
       justify-content: center;
       width: 100%;
       height: clamp(10rem, 42vw, 25rem);
+      @media screen and (width >= 64rem) {
+        display: none;
+      }
 
       img {
         width: 100%;
@@ -38,10 +46,30 @@
 
     &__image--left {
       display: none;
+      @media screen and (width >= 64rem) {
+        display: block;
+        width: 45%;
+        padding-bottom: 3.5625rem;
+
+        img {
+          width: 100%;
+          object-fit: contain;
+        }
+      }
     }
 
     &__image--right {
       display: none;
+      @media screen and (width >= 64rem) {
+        display: block;
+        width: 45%;
+        padding-top: 3.5625rem;
+
+        img {
+          width: 100%;
+          object-fit: contain;
+        }
+      }
     }
 
     &__content {
@@ -52,14 +80,21 @@
       @media screen and (width >= 48rem) {
         padding: 0 calc($spacing-80 * 2);
       }
+      @media screen and (width >= 64rem) {
+        gap: $spacing-32;
+        padding: 0;
+      }
     }
 
     &__title {
-      @include text-preset-m1;
+      font-size: clamp($fs-40, 5vw, $fs-64);
+      font-weight: $fw-black;
+      line-height: $lh-110;
       color: $color-slate-900;
-      @media screen and (width >= 48rem) {
-        @include text-preset-t1;
-      }
+    }
+
+    &__description {
+      font-size: clamp($fs-16, 1.5vw, $fs-18);
     }
 
     &__cta {
