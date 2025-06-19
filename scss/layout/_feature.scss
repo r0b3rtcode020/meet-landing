@@ -1,0 +1,60 @@
+@use "../base/variables" as *;
+@use "../base/mixins" as *;
+
+/*----------------- Feature -----------------*/
+
+.feature {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: $spacing-64;
+  padding: calc($spacing-80 + $spacing-32) $spacing-32 $spacing-64 $spacing-32;
+  @media screen and (width >= 48rem) {
+    padding: calc($spacing-80 + $spacing-56) $spacing-32 $spacing-64 $spacing-32;
+  }
+  @media screen and (width >= 64rem) {
+    padding: calc($spacing-80 + $spacing-56) $spacing-80 $spacing-72 $spacing-80;
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    gap: $spacing-32;
+    text-align: center;
+    width: clamp(19.4375rem, 70%, 34rem);
+  }
+
+  &__header {
+    display: flex;
+    flex-direction: column;
+    gap: $spacing-16;
+  }
+
+  &__tagline {
+    @include text-preset-m3;
+    color: $color-cyan-600;
+    @media screen and (width >= 48rem) {
+      @include text-preset-t3;
+    }
+    @media screen and (width >= 80rem) {
+      @include text-preset-3;
+    }
+  }
+
+  &__title {
+    @include text-preset-m2;
+    color: $color-slate-900;
+    text-wrap: pretty;
+    @media screen and (width >= 48rem) {
+      @include text-preset-t2;
+    }
+    @media screen and (width >= 80rem) {
+      @include text-preset-2;
+      margin: 0 $spacing-48;
+    }
+  }
+
+  &__description {
+    font-size: clamp(1rem, 1.5vw, 1.125rem);
+  }
+}
