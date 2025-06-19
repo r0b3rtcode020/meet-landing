@@ -1,0 +1,29 @@
+@use "../base/variables" as *;
+@use "../base/mixins" as *;
+
+/*----------------- Divider -----------------*/
+
+.divider {
+  @include text-preset-5;
+  color: $color-slate-600;
+  background-color: $color-white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: $spacing-56;
+  height: $spacing-56;
+  border: 1px solid $color-slate-300;
+  border-radius: 50%;
+  position: relative;
+
+  &::before {
+    content: "";
+    width: 0.0625rem;
+    height: $spacing-80;
+    background-color: $color-slate-300;
+    position: absolute;
+    left: 50%;
+    bottom: 100%;
+    transform: translateX(-50%);
+  }
+}
