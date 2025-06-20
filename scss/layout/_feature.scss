@@ -55,6 +55,6 @@
   }
 
   &__description {
-    font-size: clamp(1rem, 1.5vw, 1.125rem);
+    font-size: clamp($fs-16, 1.5vw, $fs-18);
   }
 }
