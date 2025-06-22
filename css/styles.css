@@ -70,6 +70,11 @@ textarea {
   width: 100%;
   padding: 3rem 5rem 0 5rem;
 }
+@media screen and (width >= 64rem) {
+  .header .logo {
+    padding-top: 5rem;
+  }
+}
 .header .hero {
   display: flex;
   flex-direction: column;

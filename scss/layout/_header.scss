@@ -13,6 +13,9 @@
     justify-content: center;
     width: 100%;
     padding: $spacing-48 $spacing-80 0 $spacing-80;
+    @media screen and (width >= 64rem) {
+      padding-top: $spacing-80;
+    }
   }
 
   .hero {
