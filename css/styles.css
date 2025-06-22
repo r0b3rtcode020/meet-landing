@@ -91,6 +91,7 @@ textarea {
 @media screen and (width >= 64rem) {
   .header .hero {
     flex-direction: row;
+    align-items: center;
   }
 }
 .header .hero__image {
